@@ -100,3 +100,14 @@ function eliminarCurso(index) {
   mostrarCarrito();
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const btnToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu ul");
+
+  if (btnToggle && menu) {
+    btnToggle.addEventListener("click", () => {
+      menu.classList.toggle("activo");
+    });
+  }
+});
+

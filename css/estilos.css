@@ -425,3 +425,62 @@ footer {
   font-weight: bold;
   margin-top: 30px;
 }
+
+/* Estilo general del header */
+.header-fijo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0db28b;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+/* Ocultar menú hamburguesa en pantallas grandes */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilo de la lista del menú */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+.menu ul li a:hover {
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+
+/* ===== Media Query: Responsive ===== */
+@media (max-width: 768px) {
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #0db28b;
+  }
+
+  .menu ul.activo {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
