@@ -148,6 +148,24 @@ nav a.activo {
   cursor: pointer;
 }
 
+.btn-vermas {
+  background-color: #00a96a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-vermas:hover {
+  background-color: #008d5a;
+}
+
 /* === TARJETAS DE CURSOS  === */
 .tarjeta-curso {
   position: relative;

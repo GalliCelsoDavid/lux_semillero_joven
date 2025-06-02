@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
   botonesAgregar.forEach(boton => {
     boton.addEventListener("click", function () {
       const curso = {
-        nombre: this.dataset.nombre,
-        precio: parseFloat(this.dataset.precio),
+        nombre: boton.dataset.nombre,
+        precio: parseFloat(boton.dataset.precio),
         cantidad: 1
       };
 
