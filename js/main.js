@@ -1,4 +1,4 @@
-// ========== Swiper Inicialización ========== 
+// ========== Swiper Inicialización ==========
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ========== LÓGICA PARA OFERTAS (Agregar al carrito) ==========
+// ========== LÓGICA PARA AGREGAR AL CARRITO ==========
 document.addEventListener("DOMContentLoaded", function () {
   const botonesAgregar = document.querySelectorAll(".btn-agregar");
 
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ========== LÓGICA PARA CARRITO.HTML ==========
+// ========== MOSTRAR CARRITO EN carrito.html ==========
 document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("lista-carrito")) {
     mostrarCarrito();
@@ -75,16 +75,20 @@ function mostrarCarrito() {
     total += subtotal;
 
     const tarjeta = document.createElement("div");
-    tarjeta.classList.add("producto-carrito");
+    tarjeta.classList.add("tarjeta-curso");
     tarjeta.innerHTML = `
-      <div class="contenido-curso">
-        <h4>${curso.nombre}</h4>
-        <p><strong>Precio:</strong> $${curso.precio}</p>
-        <p><strong>Cantidad:</strong> ${curso.cantidad}</p>
-        <p><strong>Subtotal:</strong> $${subtotal}</p>
+      <div class="etiqueta-descuento">${curso.cantidad > 1 ? 'Oferta x' + curso.cantidad : 'Curso'}</div>
+      <div class="imagen-curso">
+        <img src="img/${obtenerImagen(curso.nombre)}" alt="${curso.nombre}">
       </div>
-      <div class="acciones-curso">
-        <button onclick="eliminarCurso(${index})" class="btn-eliminar">Eliminar</button>
+      <div class="contenido-curso">
+        <p class="modalidad">Curso agregado</p>
+        <h3>${curso.nombre}</h3>
+        <p class="descripcion">Subtotal por ${curso.cantidad} unidad/es:</p>
+        <div class="info-precio">
+          <p class="precio-descuento">$ ${subtotal.toFixed(2)} ARS</p>
+        </div>
+        <button class="btn-eliminar" onclick="eliminarCurso(${index})">Eliminar</button>
       </div>
     `;
     contenedor.appendChild(tarjeta);
@@ -93,6 +97,7 @@ function mostrarCarrito() {
   totalElemento.textContent = total.toFixed(2);
 }
 
+// ========== ELIMINAR CURSO ==========
 function eliminarCurso(index) {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   carrito.splice(index, 1);
@@ -100,6 +105,7 @@ function eliminarCurso(index) {
   mostrarCarrito();
 }
 
+// ========== MENÚ HAMBURGUESA ==========
 document.addEventListener("DOMContentLoaded", () => {
   const btnToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".menu ul");
@@ -111,3 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// ========== FUNCIÓN AUXILIAR PARA IMÁGENES SEGÚN CURSO ==========
+function obtenerImagen(nombreCurso) {
+  const nombre = nombreCurso.toLowerCase();
+
+  if (nombre.includes("programación")) return "programacion.png";
+  if (nombre.includes("sql")) return "sql.png";
+  if (nombre.includes("inglés") || nombre.includes("ingles")) return "ingles.png";
+  return "default.jpg";
+}
