@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header class="header-fijo">
     <div class="logo">
       <img src="img/img-logo-negro.png" alt="Logo Galli">
@@ -18,20 +19,28 @@
     </div>
     <nav class="menu">
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="campus.html" class="activo">Login</a></li>
+        <li><a href="profesor-dashboard.html">Inicio</a></li>
+        <li><a href="perfil_profesor.html">Mi Perfil</a></li>
+        <li><a href="logout.php">Cerrar sesión</a></li>
       </ul>
     </nav>
   </header>
 
-  <main style="padding: 40px 20px; max-width: 600px; margin: auto;">
-    <h2 style="color: #00a96a; font-family: 'Poppins', sans-serif; text-align: center;">Registro de Nuevo Usuario</h2>
-    <form action="registro_usuario.php" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+  <main class="formulario-perfil">
+    <h2>Registro de Nuevo Usuario</h2>
+    <form action="registro_usuario.php" method="POST" enctype="multipart/form-data">
 
       <label for="apellido">Apellido:</label>
       <input type="text" id="apellido" name="apellido" required>
+
+      <label for="nombres">Nombres:</label>
+      <input type="text" id="nombres" name="nombres" required>
+
+      <label for="cuit">Cuit:</label>
+      <input type="number" id="cuit" name="cuit" required>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required>
 
       <label for="email">Correo electrónico:</label>
       <input type="email" id="email" name="email" required>
@@ -48,8 +57,8 @@
         <option value="2">Profesor</option>
       </select>
 
-      <label for="redes">Redes Sociales (opcional):</label>
-      <textarea id="redes" name="redes_sociales" rows="3"></textarea>
+      <label for="foto">Foto de perfil:</label>
+      <input type="file" id="foto" name="foto" accept="image/*">
 
       <button type="submit" class="btn">Registrar</button>
     </form>
@@ -58,5 +67,9 @@
   <footer>
     <p style="text-align:center">gallicelsodavid@gmail.com</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
 </body>
 </html>
