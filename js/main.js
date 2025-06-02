@@ -119,6 +119,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ========== FUNCIÓN AUXILIAR PARA IMÁGENES SEGÚN CURSO ==========
 function obtenerImagen(nombreCurso) {
+  if (!nombreCurso || typeof nombreCurso !== "string") return "default.jpg";
+
   const nombre = nombreCurso.toLowerCase();
 
   if (nombre.includes("programación")) return "programacion.png";
