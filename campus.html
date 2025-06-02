@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header class="header-fijo">
     <div class="logo">
       <img src="img/img-logo-negro.png" alt="Logo Galli">
@@ -18,7 +19,7 @@
     </div>
     <nav class="menu">
       <ul>
-        <li><a href="index.html" >Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
         <li><a href="ofertas.html">Ofertas Académicas</a></li>
         <li><a href="campus.html" class="activo">Campus</a></li>
@@ -27,26 +28,25 @@
     </nav>
   </header>
 
-  <main style="padding: 40px 20px; text-align: center; max-width: 500px; margin: auto;">
-    <h2 style="color: #00a96a; font-family: 'Poppins', sans-serif;">Acceso al Campus Virtual</h2>
-    <p>Ingresá con tu usuario y contraseña para acceder a tu aula virtual.</p>
+  <main class="formulario-perfil">
+    <h2>Acceso al Campus Virtual</h2>
+    <p style="text-align: center;">Ingresá con tu usuario y contraseña para acceder a tu aula virtual.</p>
 
-    <form action="validar_login.php" method="POST" style="text-align: left;">
-
+    <form action="validar_login.php" method="POST">
       <label for="rol_id">Condición:</label>
-<select id="rol_id" name="rol_id" required>
-  <option value="">Seleccioná una opción</option>
-  <option value="1">Estudiante</option>
-  <option value="2">Profesor</option>
-</select><br><br>
-    
+      <select id="rol_id" name="rol_id" required>
+        <option value="">Seleccioná una opción</option>
+        <option value="1">Estudiante</option>
+        <option value="2">Profesor</option>
+      </select>
+
       <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required><br><br>
+      <input type="email" id="email" name="email" required>
 
       <label for="password">Contraseña:</label>
-      <input type="password" id="password" name="password" required><br><br>
+      <input type="password" id="password" name="password" required>
 
-      <button type="submit" class="btn">Ingresar</button>
+      <button type="submit" class="btn-guardar">Ingresar</button>
     </form>
   </main>
 
@@ -61,7 +61,7 @@
   </section>
 
   <footer>
-    <p>gallicelsodavid@gmail.com</p>
+    <p style="text-align: center;">gallicelsodavid@gmail.com</p>
   </footer>
 
   <script src="js/main.js"></script>

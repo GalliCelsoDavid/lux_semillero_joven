@@ -656,3 +656,43 @@ main.formulario-perfil .btn:hover {
   margin-left: 8px;
   vertical-align: middle;
 }
+
+/* ===== formulario campus===== */
+
+.formulario-perfil {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+.formulario-perfil h2 {
+  margin-bottom: 20px;
+  color: #00a96a;
+  text-align: center;
+}
+.formulario-perfil label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.formulario-perfil input,
+.formulario-perfil select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.formulario-perfil .btn-guardar {
+  margin-top: 20px;
+  background-color: #00a96a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
