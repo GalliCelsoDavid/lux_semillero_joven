@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito – Galli Semillero Juvenil</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Serif+4&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header-fijo">
+    <div class="logo">
+      <img src="img/img-logo-negro.png" alt="Logo Galli">
+      <h1>Galli Semillero Juvenil</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" >Inicio</a></li>
+        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+        <li><a href="ofertas.html">Ofertas Académicas</a></li>
+        <li><a href="campus.html">Campus</a></li>
+        <li><a href="carrito.html" class="activo">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="padding: 40px 20px;">
+    <h2 style="text-align:center; font-family: 'Poppins', sans-serif; color: #00a96a;">🛒 Carrito de compras</h2>
+
+    <section class="carrito" style="max-width: 1000px; margin: 30px auto;">
+      <div id="lista-carrito" class="carrito-productos">
+        <!-- Productos dinámicos con JS -->
+      </div>
+
+      <div class="total" style="margin-top: 20px; text-align: right;">
+        <p style="font-size: 18px;"><strong>Total:</strong> $<span id="total">0</span></p>
+        <button class="btn">Finalizar compra</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="redes-sociales">
+    <h3>Seguinos en nuestras redes:</h3>
+    <div class="iconos-redes">
+      <a href="https://www.facebook.com/galli.david.5" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://wa.me/" target="_blank"><img src="img/whatsapp.svg" alt="WhatsApp"></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>gallicelsodavid@gmail.com</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
