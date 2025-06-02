@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 30,
+    spaceBetween: 0,
     centeredSlides: true,
     speed: 9000,
     autoplay: {
-      delay: 500,
+      delay: 0,
       disableOnInteraction: false,
       pauseOnMouseEnter: true
     },

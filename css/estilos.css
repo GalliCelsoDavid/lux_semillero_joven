@@ -101,11 +101,7 @@ nav a.activo {
 }
 
 /* BODY */
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
+  
   main {
     max-width: 1200px;
     margin: 0 auto;
@@ -160,6 +156,12 @@ nav a.activo {
   cursor: pointer;
 }
 
+.swiper-pagination {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
 .btn-vermas {
   background-color: #00a96a;
   color: white;
@@ -176,6 +178,26 @@ nav a.activo {
 
 .btn-vermas:hover {
   background-color: #008d5a;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #00a96a; /* o blanco si el fondo es oscuro */
+  top: 90%; /* centra verticalmente respecto al carrusel */
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 60px; /* alejarlas un poco del carrusel */
+}
+
+.swiper-button-next {
+  right: 60px;
 }
 
 /* === TARJETAS DE CURSOS  === */
