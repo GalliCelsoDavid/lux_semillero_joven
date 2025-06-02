@@ -100,6 +100,18 @@ nav a.activo {
   background-color: #333333;
 }
 
+/* BODY */
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
 /* CURSOS EN DEMANDA */
 .cursos-demanda {
   padding: 40px 20px;
